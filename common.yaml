@@ -1,0 +1,47 @@
+timezone::timezone: #timezone#
+
+classes:
+  - timezone
+  - loginconf
+  - mailalias
+  - profiles::db::mysql
+  - redmine
+
+# inherit Mk defaults:
+# grep ^MYSQL_DEFAULT /usr/ports/Mk/bsd.default-versions.mk
+redmine::mysql_version: #mysql_version#
+redmine::db_password: #mysql_db_password#
+redmine::redmine_port: #redmine_port#
+
+mysql::client::package_name: databases/mysql%{hiera('redmine::mysql_version')}-client
+
+profiles::db::mysql::globals:
+  package_name: databases/mysql%{hiera('redmine::mysql_version')}-server
+  create_root_my_cnf: false
+  remove_default_accounts: true
+  restart: true
+
+profiles::db::mysql::options:
+  client:
+    port: #port#
+    socket: #socket#
+  mysqld:
+    socket: #socket#
+    bind-address: #bind_address#
+    skip-networking: false
+    expire_logs_days: #expire_logs_days#
+    key_buffer_size: #key_buffer_size#
+    max_allowed_packet: #max_allowed_packet#
+    max_binlog_size: #max_binlog_size#
+    max_connections: #max_connections#
+    thread_cache_size: #thread_cache_size#
+    thread_stack: #thread_stack#
+    sort_buffer_size: #sort_buffer_size#
+
+profiles::db::mysql::db:
+  'redmine':
+    user: 'redmine'
+    password: "%{hiera('redmine::db_password')}"
+    host: '%{::ipaddress}'
+    grant:
+      - ALL
