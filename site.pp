@@ -16,7 +16,6 @@ cat <<EOF
   class { 'timezone': }
   class { 'loginconf': }
   class { 'mailalias': }
-  class { 'profiles::db::mysql': }
   class { 'redmine': }
 EOF
 }

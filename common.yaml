@@ -5,36 +5,12 @@ timezone::timezone: #timezone#
 redmine::mysql_version: #mysql_version#
 redmine::db_password: #db_password#
 redmine::redmine_port: #redmine_port#
-
-mysql::client::package_name: databases/mysql%{hiera('redmine::mysql_version')}-client
-
-profiles::db::mysql::globals:
-  package_name: databases/mysql%{hiera('redmine::mysql_version')}-server
-  create_root_my_cnf: false
-  remove_default_accounts: true
-  restart: true
-
-profiles::db::mysql::options:
-  client:
-    port: #port#
-    socket: #socket#
-  mysqld:
-    socket: #socket#
-    bind-address: #bind_address#
-    skip-networking: false
-    expire_logs_days: #expire_logs_days#
-    key_buffer_size: #key_buffer_size#
-    max_allowed_packet: #max_allowed_packet#
-    max_binlog_size: #max_binlog_size#
-    max_connections: #max_connections#
-    thread_cache_size: #thread_cache_size#
-    thread_stack: #thread_stack#
-    sort_buffer_size: #sort_buffer_size#
-
-profiles::db::mysql::db:
-  'redmine':
-    user: 'redmine'
-    password: "%{hiera('redmine::db_password')}"
-    host: '%{::ipaddress}'
-    grant:
-      - ALL
+redmine::mysql_max_connection: #max_connections#
+redmine::mysql_bind_address: #bind_address#
+redmine::mysql_expire_logs_days: #expire_logs_days#
+redmine::mysql_max_allowed_packet: #max_allowed_packet#
+redmine::mysql_key_buffer_size: #key_buffer_size#
+redmine::mysql_max_binlog_size: #max_binlog_size#
+redmine::mysql_thread_cache_size: #thread_cache_size#
+redmine::mysql_thread_stack: #thread_stack#
+redmine::mysql_sort_buffer_size: #sort_buffer_size#
