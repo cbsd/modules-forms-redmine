@@ -13,11 +13,11 @@ esac
 generate_manifest()
 {
 cat <<EOF
+  class { 'timezone': }
   class { 'loginconf': }
-  class { 'nginx': }
-  class { 'php': }
+  class { 'mailalias': }
   class { 'profiles::db::mysql': }
-  class { 'profile::package': }
+  class { 'redmine': }
 EOF
 }
 
