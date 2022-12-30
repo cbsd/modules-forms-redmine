@@ -3,7 +3,7 @@ timezone::timezone: #timezone#
 # inherit Mk defaults:
 # grep ^MYSQL_DEFAULT /usr/ports/Mk/bsd.default-versions.mk
 redmine::mysql_version: #mysql_version#
-redmine::db_password: #mysql_db_password#
+redmine::db_password: #db_password#
 redmine::redmine_port: #redmine_port#
 
 mysql::client::package_name: databases/mysql%{hiera('redmine::mysql_version')}-client

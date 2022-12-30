@@ -42,7 +42,7 @@ INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,a
 INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,2,"timezone","System timezone",'Europe/Moscow','Europe/Moscow','',1, "maxlen=60", "inputbox", "", "" );
 
 INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,100,"-MySQL","MySQL",'MySQL','PP','',1, "maxlen=60", "delimer", "", "" );
-INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,102,"mysql_ver","MySQL version, MYSQL_DEFAULT in bsd.default-versions.mk",'57','57','',1, "maxlen=5", "inputbox", "", "" );
+INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,102,"mysql_version","MySQL version, MYSQL_DEFAULT in bsd.default-versions.mk",'57','57','',1, "maxlen=5", "inputbox", "", "" );
 INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,103,"-Additional","Additional params",'Additional params','','',1, "maxlen=60", "delimer", "", "" );
 INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,104,"bind_address","bind_address",'127.0.0.1','127.0.0.1','',1, "maxlen=60", "inputbox", "", "" );
 INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( "forms", 1,105,"expire_logs_days","expire_logs_days",'10','10','',1, "maxlen=6", "inputbox", "", "" );
