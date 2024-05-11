@@ -58,7 +58,7 @@ INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,a
 
 INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( 'forms', 1,200,'-REDMINE','REDMINE','REDMINE','PP','',1, 'maxlen=60', 'delimer', '', '' );
 INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( 'forms', 1,201,'db_password','Redmine user DB password','redminepass','redminepass','',1, 'maxlen=60', 'inputbox', '', '' );
-INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( 'forms', 1,203,'redmine_package','redmine_package name','redmine50','redmine50','',1, 'maxlen=6', 'inputbox', '', '' );
+INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( 'forms', 1,203,'redmine_package','redmine_package name','redmine51','redmine51','',1, 'maxlen=6', 'inputbox', '', '' );
 INSERT INTO forms ( mytable,group_id,order_id,param,desc,def,cur,new,mandatory,attr,type,link,groupname ) VALUES ( 'forms', 1,204,'redmine_port','redmine_port HTTP thin server','3000','3000','',1, 'maxlen=6', 'inputbox', '', '' );
 COMMIT;
 EOF
